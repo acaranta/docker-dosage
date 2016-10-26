@@ -11,5 +11,5 @@ RUN pip install -r requirements.txt && python setup.py install
 RUN mkdir /dosage
 WORKDIR /dosage
 
-CMD dosage $OPTIONS -c ; while true; echo "Waiting $RUNEVERY seconds before next run of dosage"; sleep $RUNEVERY; do dosage $OPTIONS -c; done
+CMD dosage $OPTIONS -c @ ; while true; echo "Waiting $RUNEVERY seconds before next run of dosage"; sleep $RUNEVERY; do dosage $OPTIONS -c @; done
 
