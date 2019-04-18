@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.10
 MAINTAINER arthur@caranta.com
 
 ENV RUNEVERY 7200
@@ -7,6 +7,7 @@ RUN git clone https://github.com/webcomics/dosage.git /app
 #RUN git clone https://github.com/acaranta/dosage.git /app
 
 WORKDIR /app
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt && python setup.py install
 
 RUN mkdir /dosage
