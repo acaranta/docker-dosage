@@ -1,5 +1,7 @@
 FROM ubuntu:20.04
 MAINTAINER arthur@caranta.com
+ENV DEBIAN_FRONTEND noninteractive
+ENV INITRD No
 
 ENV RUNEVERY 7200
 RUN apt-get update && apt-get install -y python3 git python3-pip python3-lxml python3-cssselect curl
