@@ -1,4 +1,4 @@
-FROM ubuntu:18.10
+FROM ubuntu:20.04
 MAINTAINER arthur@caranta.com
 
 ENV RUNEVERY 7200
